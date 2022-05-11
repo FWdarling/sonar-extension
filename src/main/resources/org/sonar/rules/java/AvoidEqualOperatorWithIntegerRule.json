@@ -1,0 +1,10 @@
+{
+    "title": "所有整型包装类对象之间值的比较，全部使用equals方法比较",
+    "type": "Bug",
+    "status": "ready",
+    "tags": [
+      "bugs"
+    ],
+    "defaultSeverity": "Critical"
+  }
+  

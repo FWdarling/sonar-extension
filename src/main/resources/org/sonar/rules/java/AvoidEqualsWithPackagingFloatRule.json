@@ -1,0 +1,9 @@
+{
+  "title": "浮点数之间的等值判断，包装数据类型不能用equals来判断",
+  "type": "Bug",
+  "status": "ready",
+  "tags": [
+    "bugs"
+  ],
+  "defaultSeverity": "Critical"
+}

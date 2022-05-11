@@ -1,0 +1,26 @@
+<p>浮点数之间的等值判断，基本数据类型不能用==来比较，包装数据类型不能用equals来判断.说明：浮点数采用“尾数+阶码”的编码方式，类似于科学计数法的“有效数字+指数”的表示方式。二进制无法精确表示大部分的十进制小数</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+  Float x = Float.valueOf(a);
+  Float y = Float.valueOf(b);
+  if (x.equals(y)) {
+     // 预期进入此代码块，执行其它业务逻辑
+     // 但是 x.equals(y) 的结果为false
+  }
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+  // 使用BigDecimal来定义值，再进行浮点数的运算操作
+  BigDecimal a = new BigDecimal("1.0");
+  BigDecimal b = new BigDecimal("0.9");
+  BigDecimal c = new BigDecimal("0.8");
+
+  BigDecimal x = a.subtract(b);
+  BigDecimal y = b.subtract(c);
+
+  if (x.compareTo(y) == 0) {
+     System.out.println("true");
+  }
+</pre>
