@@ -1,0 +1,10 @@
+{
+    "title": "$_ruletitle",
+    "type": "Bug",
+    "status": "ready",
+    "tags": [
+      "bugs"
+    ],
+    "defaultSeverity": "Critical"
+  }
+  
