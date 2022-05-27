@@ -1,0 +1,10 @@
+{
+    "title": "类内boolean类型成员变量命名检查",
+    "type": "CODE_SMELL",
+    "status": "ready",
+    "tags": [
+      "code-smell"
+    ],
+    "defaultSeverity": "Critical"
+  }
+  

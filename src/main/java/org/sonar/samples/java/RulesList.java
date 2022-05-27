@@ -10,8 +10,13 @@ import java.util.Collections;
 import java.util.List;
 import org.sonar.plugins.java.api.JavaCheck;
 import org.sonar.samples.java.checks.*;
+import org.sonar.samples.java.checks.assignmentexpression.AvoidAssignDoubleValueToFloatVariableRule;
 import org.sonar.samples.java.checks.binaryexpression.AvoidEqualOperatorWithIntegerRule;
+import org.sonar.samples.java.checks.binaryexpression.AvoidEqualsOperatorWithBasicFloatRule;
+import org.sonar.samples.java.checks.classtree.BooleanMemberVariableNamingRule;
+import org.sonar.samples.java.checks.method.SpringControllerRequestMethodReturnCheckRule;
 import org.sonar.samples.java.checks.methodstatement.AvoidEqualsWithPackagingFloatRule;
+import org.sonar.samples.java.checks.variable.AvoidUseFloatVariableRule;
 
 public final class RulesList {
 
@@ -30,9 +35,14 @@ public final class RulesList {
    */
   public static List<Class<? extends JavaCheck>> getJavaChecks() {
     return Collections.unmodifiableList(Arrays.asList(
-      MyFirstCustomRule.class,
-      AvoidEqualsWithPackagingFloatRule.class,
-      AvoidEqualOperatorWithIntegerRule.class
+            MyFirstCustomRule.class,
+            AvoidEqualsWithPackagingFloatRule.class,
+            AvoidEqualOperatorWithIntegerRule.class,
+            AvoidEqualsOperatorWithBasicFloatRule.class,
+            AvoidAssignDoubleValueToFloatVariableRule.class,
+            BooleanMemberVariableNamingRule.class,
+            AvoidUseFloatVariableRule.class,
+            SpringControllerRequestMethodReturnCheckRule.class
     ));
   }
 

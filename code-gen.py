@@ -5,9 +5,9 @@ from cgi import print_form
 
 rule_name = ''
 rule_type_index = 0
-rule_type_list = ['binaryexpression','methodstatement']
-rule_type_desc = ['二元表达式','方法调用']
-rule_type_name = ['BinaryExpressionCheck', 'MethodCallStatementCheck']
+rule_type_list = ['binaryexpression','methodstatement','classtree','variable','assignmentexpression','method']
+rule_type_desc = ['二元表达式检查','方法调用检查','类信息检查','局部变量检查','赋值表达式检查','方法检查']
+rule_type_name = ['BinaryExpressionCheck', 'MethodCallStatementCheck','ClassTreeCheck','VariableCheck','AssignmentExpressionCheck','MethodCheck']
 rule_title = ''
 rule_desc = ''
 
@@ -36,6 +36,7 @@ def start():
     for i in range(length):
         print(str(i) + '.' + rule_type_desc[i], end = ' ')
     print()
+    global rule_type_index
     rule_type_index = int(input("请输入对应的索引(0 - " + str(length - 1) + "): " ))
     while rule_type_index < 0 or rule_type_index >= length:
         rule_type_index = int(input("输入有误 请输入对应的索引(0 - " + str(length - 1) + "): " ))
@@ -94,6 +95,8 @@ def excute():
     print("已生成文件 " + file_name)
     print()
 
+    print("====================================================================")
+    print("注意！")
     print("必须：请在自定义规则源代码文件中加入自己的规则实现（根据扩展的抽象类实现对应的抽象函数）")
     print("必须：一定要在 {project_root}/src/main/java/org/sonar/samples/java/RuleList.java 文件中将自己的规则添加到 getJavaChecks 方法中")
     print("必须: 在规则测试文件中写入自己的测试用例（必须是可编译的 java 文件）sonarqube 要求测试文件中至少包含一处不符合规则的代码 并在不符合规则的行后添加注释// Noncompliant 可以参考同目录下其他文件")

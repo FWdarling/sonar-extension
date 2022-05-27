@@ -1,0 +1,10 @@
+{
+    "title": "禁止将double值赋值给float变量",
+    "type": "Bug",
+    "status": "ready",
+    "tags": [
+      "bugs"
+    ],
+    "defaultSeverity": "Critical"
+  }
+  

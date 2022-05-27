@@ -1,0 +1,25 @@
+<p>浮点数之间的等值判断，基本数据类型不能用==来比较，包装数据类型不能用equals来判断.说明：浮点数采用“尾数+阶码”的编码方式，类似于科学计数法的“有效数字+指数”的表示方式。二进制无法精确表示大部分的十进制小数</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+    float a = 1.0f - 0.9f;
+    float b = 0.9f - 0.8f;
+
+    if (a == b) {
+       // 预期进入此代码块，执行其它业务逻辑
+       // 但是 a==b 的结果为false
+    }
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+    //指定一个误差范围，两个浮点数的差值在此范围之内，则认为是相等的
+
+    float a = 1.0f - 0.9f;
+    float b = 0.9f - 0.8f;
+    float diff = 1e-6f;
+
+    if (Math.abs(a - b) < diff) {
+       System.out.println("true");
+    }
+</pre>

@@ -28,6 +28,16 @@
 
 -   更多信息或者有其他自定义需求可以参考下面的 reference
 
+### 自定义规则模式
+
+-   如果您自定义了某一个规则模式，想要添加到此脚本中，可以直接打开根目录下的 `code-gen.py`修改最上面的全局变量
+
+-   在 `rule_type_list`  添加规则模式的名字（使用全小写，与包命名完全匹配）
+
+-   在 `rule_type_desc`  添加规则模式的描述（可以用中文，仅用于脚本运行后提示用户选择规则类型）
+
+-   在 `rule_type_name`  添加规则模式的类命名（必须用大驼峰，且与规则类型的 java 类名完全一致）
+
 ### License
 
  [MIT No Attribution](LICENSE.txt) license.

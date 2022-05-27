@@ -1,0 +1,10 @@
+{
+    "title": "浮点数之间的等值判断，基本数据类型不能用==来比较",
+    "type": "Bug",
+    "status": "ready",
+    "tags": [
+      "bugs"
+    ],
+    "defaultSeverity": "Critical"
+  }
+  

@@ -1,0 +1,10 @@
+{
+    "title": "对springcontroller中的requestmapping方法进行返回类型检查",
+    "type": "Bug",
+    "status": "ready",
+    "tags": [
+      "bugs"
+    ],
+    "defaultSeverity": "Critical"
+  }
+  

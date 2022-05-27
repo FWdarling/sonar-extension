@@ -1,0 +1,10 @@
+{
+    "title": "（主要用于金融领域）规定不使用单精度浮点数",
+    "type": "CODE_SMELL",
+    "status": "ready",
+    "tags": [
+      "code-smell"
+    ],
+    "defaultSeverity": "Critical"
+  }
+  
